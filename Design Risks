@@ -1,0 +1,21 @@
+We have a couple of high risk threats as described below, attached the mitigation as well 
+
+Infrastructure protection
+  Definition of risk: 
+      There is a trust between on-prem and AWS environments, where the security control for securing all networking resources from on-prem to the cloud is based only on site-to-site VPN. 
+
+  Mitigation:
+    1- Utilize Security Group  
+    2- Use Network Access List 
+    3- Define connection in AWS TG router table 
+    4- Enable GWLB 
+    5- Enable AWS network Firewall 
+    6- Enable Amazone Route 53 Resolver DNS firewall 
+
+Incident Response
+		Definition of risk: 
+        Ransomware attacks might target the on-prem environment and lateral movement targets the cloud environment.
+  
+    Mitigations: 
+        1- A quick containment block the traffic from the on-prem environment to the cloud or deny the access to the compromised account. 
+        2- Automate incident response rather than leveraging the manual process to monitor the security posture and manual react to events  
